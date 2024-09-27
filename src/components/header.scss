@@ -5,6 +5,7 @@ header {
 
     position: fixed;
     z-index: 2;
+    margin-top: 5px;
 
     button,
     div {
@@ -24,7 +25,13 @@ header {
     option {
         font-size: 28px;
         border: none;
+        outline: none;
         transition: background-color 0.3s;
         background-color: var(--first-color);
+
+        @media screen and (max-width: module.$tablet-width),
+            screen and (max-aspect-ratio: 1/1) {
+            background-color: module.$main-color;
+        }
     }
 }

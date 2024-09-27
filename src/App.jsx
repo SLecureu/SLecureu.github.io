@@ -1,11 +1,11 @@
-import { Root } from "./root.jsx";
+import { Root, LanguageProvider } from "./import.js";
 import "./app.scss";
 
 function App() {
     return (
-        <>
+        <LanguageProvider>
             <Root />
-        </>
+        </LanguageProvider>
     );
 }
 

@@ -1,8 +1,12 @@
-import { Page1 } from "./import";
-// import pfp from "../assets/pfp.jpg";
+import { Page1, Header } from "./import";
 
 const Root = () => {
-    return <Page1 />;
+    return (
+        <>
+            <Header />
+            <Page1 />
+        </>
+    );
 };
 
-export { Root };
+export default Root;

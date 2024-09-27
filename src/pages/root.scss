@@ -96,12 +96,14 @@ $second-color: rgb(42, 127, 98);
         .description {
             width: 40vw;
 
-            margin-left: 42%;
+            margin-left: 37%;
+            margin-right: 5%;
             text-align: left;
 
             @media screen and (max-width: $tablet-width),
                 screen and (max-aspect-ratio: 1/1) {
                 margin-left: 0;
+                margin-right: 0;
                 width: 50vw;
             }
 

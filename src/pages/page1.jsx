@@ -31,9 +31,11 @@ const Page1 = () => {
                     </p>
                     <div className="buttons">
                         <button className="btn btn--download">
-                            Download CV
+                            {language == "fr"
+                                ? "Télécharger CV"
+                                : "Download CV"}
                         </button>
-                        <button className="btn btn--contact">Contact</button>
+                        <button className="btn btn--contact">Contacts</button>
                     </div>
                 </div>
             </div>

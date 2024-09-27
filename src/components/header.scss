@@ -1,0 +1,30 @@
+@use "../module";
+
+header {
+    width: 100%;
+
+    position: fixed;
+    z-index: 2;
+
+    button,
+    div {
+        float: right;
+        margin-right: 10px;
+
+        border: none;
+        background: transparent;
+    }
+
+    svg {
+        width: 30px;
+        height: 30px;
+    }
+
+    select,
+    option {
+        font-size: 28px;
+        border: none;
+        transition: background-color 0.3s;
+        background-color: var(--first-color);
+    }
+}

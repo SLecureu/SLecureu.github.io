@@ -57,7 +57,7 @@ $second-color: rgb(42, 127, 98);
                 top: calc(100% - (var(--shape_size) / 2));
             }
 
-            .page1__image {
+            img {
                 width: 100%;
 
                 object-fit: cover;

@@ -1,4 +1,5 @@
 import { Root } from "./import.js";
+import "./app.css";
 
 function App() {
     return (

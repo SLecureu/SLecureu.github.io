@@ -1,3 +1,3 @@
-import Root from "./pages/root";
+import Page1 from "./pages/page1";
 
-export { Root };
+export { Page1 };

@@ -1,4 +1,4 @@
-import { Root } from "./import.js";
+import { Root } from "./root.jsx";
 import "./app.css";
 
 function App() {

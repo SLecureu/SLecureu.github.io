@@ -1,6 +1,5 @@
 // Sizes
 $tablet-width: 980px;
-$desktop-width: 1320px;
 
 // Colors
 $light-color: rgb(247, 255, 247);
@@ -18,78 +17,125 @@ $second-color: rgb(42, 127, 98);
 
     background-color: $light-color;
 
-    &__left {
-        width: 33%;
-        height: 100%;
-
-        background-color: $first-color;
+    @media screen and (max-width: $tablet-width),
+        screen and (max-aspect-ratio: 1/1) {
+        flex-direction: column;
     }
 
-    &__round-shape {
-        width: 30vw;
-        height: 30vw;
-        // min-width: 300px;
-        // min-height: 300px;
+    &__left {
+        width: 33vw;
+        height: 100vh;
 
-        position: absolute;
-        left: 18%;
+        position: relative;
 
-        background-color: $complementary-color;
-        border-radius: 50%;
-        overflow: hidden;
+        background-color: $first-color;
 
-        .page1__image {
-            width: 100%;
+        @media screen and (max-width: $tablet-width),
+            screen and (max-aspect-ratio: 1/1) {
+            width: 100vw;
+            height: 33vh;
+        }
 
-            object-fit: cover;
+        &__round-shape {
+            --shape_size: 30vw;
+            width: var(--shape_size);
+            height: var(--shape_size);
+
+            position: absolute;
+            left: calc(100% - (var(--shape_size) / 2));
+            top: calc(50% - (var(--shape_size) / 2));
+
+            background-color: $complementary-color;
+            border-radius: 50%;
+            overflow: hidden;
+
+            @media screen and (max-width: $tablet-width),
+                screen and (max-aspect-ratio: 1/1) {
+                --shape_size: min(45vw, 45vh);
+
+                left: calc(50% - (var(--shape_size) / 2));
+                top: calc(100% - (var(--shape_size) / 2));
+            }
+
+            .page1__image {
+                width: 100%;
+
+                object-fit: cover;
+            }
         }
     }
 
     &__right {
-        width: 66%;
-        height: 100%;
+        width: 66vw;
+        height: 100vh;
 
         flex: 1;
         display: flex;
         align-items: center;
 
+        --size: 1rem;
+
+        @media screen and (max-width: $tablet-width),
+            screen and (max-aspect-ratio: 1/1) {
+            width: 100vw;
+            height: 66vh;
+
+            align-items: start;
+            justify-content: center;
+        }
+
+        @media screen and (max-width: $tablet-width) {
+            padding-top: calc(min(45vw, 45vh) / 2);
+            --size: 0.75rem;
+        }
+
+        @media screen and (max-aspect-ratio: 1/1) {
+            align-items: center;
+        }
+
         .description {
-            width: 40%;
+            width: 40vw;
 
             margin-left: 42%;
             text-align: left;
 
+            @media screen and (max-width: $tablet-width),
+                screen and (max-aspect-ratio: 1/1) {
+                margin-left: 0;
+                width: 50vw;
+            }
+
             h2 {
-                font-size: 1.5rem;
+                font-size: calc(var(--size) * 1.5);
                 color: $dark-color;
             }
 
             h1 {
-                margin-bottom: 1rem;
+                margin-bottom: var(--size);
 
-                font-size: 3rem;
+                font-size: calc(var(--size) * 3);
                 color: $dark-color;
             }
 
             p {
-                margin-bottom: 2rem;
+                margin-bottom: calc(var(--size) * 2);
                 line-height: 1.5;
 
                 color: $dark-color;
-                font-size: 1rem;
+                font-size: var(--size);
             }
 
             .buttons {
                 display: flex;
-                gap: 1rem;
+                gap: var(--size);
 
                 .btn {
-                    padding: 0.75rem 2rem;
+                    padding: calc(var(--size) * 0.75) calc(var(--size) * 2);
 
                     border: none;
                     border-radius: 25px;
                     cursor: pointer;
-                    font-size: 1rem;
+                    font-size: var(--size);
                     transition: background-color 0.3s ease;
                 }
 
@@ -120,4 +166,8 @@ $second-color: rgb(42, 127, 98);
             }
         }
     }
+}
+
+@media screen and (max-width: $tablet-width),
+    screen and (max-aspect-ratio: 1/1) {
 }

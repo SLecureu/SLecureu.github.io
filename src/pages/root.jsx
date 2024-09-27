@@ -3,14 +3,16 @@ import "./root.scss";
 const Root = () => {
     return (
         <div className="page1">
-            <div className="page1__left" />
-            <div className="page1__round-shape">
-                {/* <img
+            <div className="page1__left">
+                <div className="page1__left__round-shape">
+                    {/* <img
                     src={require("./greenThemeLight.png")}
                     alt="Jane Doe"
                     className="portfolio__image"
                 /> */}
+                </div>
             </div>
+
             <div className="page1__right">
                 <div className="description">
                     <h2>Full Stack Developer</h2>

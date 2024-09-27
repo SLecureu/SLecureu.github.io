@@ -1,5 +1,5 @@
 import { Root } from "./root.jsx";
-import "./app.css";
+import "./app.scss";
 
 function App() {
     return (

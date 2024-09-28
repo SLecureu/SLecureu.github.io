@@ -1,0 +1,167 @@
+@use "../module";
+
+.page1 {
+    height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    transition: background-color 0.3s;
+    background-color: var(--first-color);
+
+    @media screen and (max-width: module.$tablet-width),
+        screen and (max-aspect-ratio: 1/1) {
+        flex-direction: column;
+    }
+
+    &__left {
+        width: 33vw;
+        height: 100vh;
+
+        position: relative;
+        background-image: linear-gradient(180deg, #4fd6e8, #437d7f);
+
+        @media screen and (max-width: module.$tablet-width),
+            screen and (max-aspect-ratio: 1/1) {
+            width: 100vw;
+            height: 33vh;
+        }
+
+        &__round-shape {
+            --shape_size: 30vw;
+            width: var(--shape_size);
+            height: var(--shape_size);
+
+            position: absolute;
+            left: calc(100% - (var(--shape_size) / 2));
+            top: calc(50% - (var(--shape_size) / 2));
+
+            transition: border 0.3s;
+            background-color: module.$complementary-color;
+            border-radius: 50%;
+            overflow: hidden;
+
+            border: 5px solid var(--first-color);
+
+            @media screen and (max-width: module.$tablet-width),
+                screen and (max-aspect-ratio: 1/1) {
+                --shape_size: min(45vw, 45vh);
+
+                left: calc(50% - (var(--shape_size) / 2));
+                top: calc(100% - (var(--shape_size) / 2));
+            }
+
+            img {
+                width: 100%;
+
+                object-fit: cover;
+            }
+        }
+    }
+
+    &__right {
+        width: 66vw;
+        height: 100vh;
+
+        flex: 1;
+        display: flex;
+        align-items: center;
+
+        --size: 1rem;
+
+        @media screen and (max-width: module.$tablet-width),
+            screen and (max-aspect-ratio: 1/1) {
+            width: 100vw;
+            height: 66vh;
+
+            align-items: start;
+            justify-content: center;
+        }
+
+        @media screen and (max-width: module.$tablet-width) {
+            padding-top: calc(min(45vw, 45vh) / 2);
+            --size: 0.75rem;
+        }
+
+        @media screen and (max-aspect-ratio: 1/1) {
+            align-items: center;
+        }
+
+        .description {
+            width: 40vw;
+
+            margin-left: 37%;
+            margin-right: 5%;
+            text-align: left;
+
+            @media screen and (max-width: module.$tablet-width),
+                screen and (max-aspect-ratio: 1/1) {
+                margin-left: 0;
+                margin-right: 0;
+                width: 50vw;
+            }
+
+            h2 {
+                font-size: calc(var(--size) * 1.5);
+            }
+
+            h1 {
+                margin-bottom: var(--size);
+
+                font-size: calc(var(--size) * 3);
+            }
+
+            p {
+                margin-bottom: calc(var(--size) * 2);
+                line-height: 1.5;
+
+                font-size: var(--size);
+            }
+
+            .buttons {
+                display: flex;
+                gap: var(--size);
+
+                .btn {
+                    padding: calc(var(--size) * 0.75) calc(var(--size) * 2);
+
+                    border: none;
+                    border-radius: 25px;
+                    cursor: pointer;
+                    font-size: var(--size);
+                    transition: background-color 0.3s ease;
+                }
+
+                .btn--download {
+                    background-color: module.$anti-color;
+                    color: var(--first-color);
+
+                    &:hover {
+                        background-color: adjust-color(
+                            module.$anti-color,
+                            $lightness: -10%
+                        );
+                    }
+                }
+
+                .btn--contact {
+                    background-color: transparent;
+                    color: module.$anti-color;
+                    border: 2px solid module.$anti-color;
+
+                    &:hover {
+                        background-color: adjust-color(
+                            module.$anti-color,
+                            $lightness: 20%
+                        );
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: module.$tablet-width),
+    screen and (max-aspect-ratio: 1/1) {
+}

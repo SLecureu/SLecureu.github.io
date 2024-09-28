@@ -1,0 +1,12 @@
+@use "./module";
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Optimistic Display;
+    font-weight: 300;
+    color: var(--second-color);
+}

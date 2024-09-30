@@ -14,6 +14,10 @@
     display: flex;
     justify-content: center;
 
+    @media screen and (max-height: module.$mobile-width) and (min-aspect-ratio: 1/1) {
+        visibility: hidden;
+    }
+
     span {
         background-color: var(--second-color);
         width: 5px;

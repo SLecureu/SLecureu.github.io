@@ -50,7 +50,7 @@ const Header = () => {
                     <ul>
                         <li>
                             <a href="#about-me">
-                                {language == "fr" ? `A Propos` : `About Me`}
+                                {language == "fr" ? `Accueil` : `Home`}
                             </a>
                         </li>
                         <li>

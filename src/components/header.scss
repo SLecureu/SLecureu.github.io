@@ -12,13 +12,23 @@ header {
         float: right;
         margin-right: 10px;
 
+        position: relative;
         border: none;
         background: transparent;
+        z-index: 4;
     }
 
     nav {
         display: flex;
         justify-content: center;
+        position: fixed;
+        width: 100vw;
+        z-index: 3;
+
+        @media screen and (max-width: module.$mobile-width) and (max-aspect-ratio: 1/1) {
+            position: initial;
+            width: auto;
+        }
     }
 
     ul {

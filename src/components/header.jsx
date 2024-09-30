@@ -46,6 +46,23 @@ const Header = () => {
                         <option value="fr">🇫🇷</option>
                     </select>
                 </div>
+                <nav>
+                    <ul>
+                        <li>
+                            <a href="#about-me">
+                                {language == "fr" ? `A Propos` : `About Me`}
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#skills">
+                                {language == "fr" ? `Compétences` : `Skills`}
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#contact">Contacts</a>
+                        </li>
+                    </ul>
+                </nav>
             </header>
         </>
     );

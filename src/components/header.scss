@@ -5,7 +5,7 @@ header {
 
     position: fixed;
     z-index: 2;
-    margin-top: 5px;
+    padding-top: 5px;
 
     button,
     div {
@@ -14,6 +14,26 @@ header {
 
         border: none;
         background: transparent;
+    }
+
+    nav {
+        display: flex;
+        justify-content: center;
+    }
+
+    ul {
+        list-style: none;
+        display: flex;
+    }
+
+    li {
+        padding: 7px;
+    }
+
+    a {
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 1.5rem;
     }
 
     svg {
@@ -27,5 +47,21 @@ header {
         border: none;
         outline: none;
         background-color: transparent;
+    }
+
+    @media screen and (max-width: module.$tablet-width) {
+        a {
+            font-size: 1rem;
+        }
+
+        select,
+        option {
+            font-size: 18px;
+        }
+
+        svg {
+            width: 20px;
+            height: 20px;
+        }
     }
 }

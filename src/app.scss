@@ -10,3 +10,12 @@
     font-weight: 300;
     color: var(--second-color);
 }
+
+html {
+    transition: background-color 0.3s;
+    background-color: var(--first-color);
+}
+
+.gap {
+    margin-bottom: 45px;
+}

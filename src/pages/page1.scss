@@ -1,14 +1,9 @@
 @use "../module";
 
 .page1 {
-    height: 100vh;
-
     display: flex;
     align-items: center;
     justify-content: space-between;
-
-    transition: background-color 0.3s;
-    background-color: var(--first-color);
 
     @media screen and (max-width: module.$tablet-width),
         screen and (max-aspect-ratio: 1/1) {

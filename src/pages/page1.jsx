@@ -7,7 +7,7 @@ const Page1 = () => {
     const { language } = useContext(LanguageContext);
 
     return (
-        <div className="page1">
+        <main className="page1 gap">
             <div className="page1__left border_gap">
                 <div className="page1__left__round-shape border_gap">
                     <img src={pfp} alt="Simon Lecureux" />
@@ -39,7 +39,7 @@ const Page1 = () => {
                     </div>
                 </div>
             </div>
-        </div>
+        </main>
     );
 };
 

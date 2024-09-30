@@ -8,7 +8,7 @@ const Scroller = () => {
 
     useEffect(() => {
         const handleScroll = () => {
-            const scrollPosition = window.scrollY + window.innerHeight - 1;
+            const scrollPosition = window.scrollY + window.innerHeight;
 
             let newIndex = sections.findIndex((section) => {
                 const element = document.querySelector(section);
@@ -36,6 +36,33 @@ const Scroller = () => {
         };
     }, [sections]);
 
+    const preventScroll = () => {
+        window.addEventListener("wheel", preventDefault, { passive: false });
+        window.addEventListener("touchmove", preventDefault, {
+            passive: false,
+        });
+        window.addEventListener("keydown", preventDefaultForScrollKeys);
+    };
+
+    const enableScroll = () => {
+        window.removeEventListener("wheel", preventDefault, { passive: false });
+        window.removeEventListener("touchmove", preventDefault, {
+            passive: false,
+        });
+        window.removeEventListener("keydown", preventDefaultForScrollKeys);
+    };
+
+    const preventDefaultForScrollKeys = (e) => {
+        const keys = [32, 33, 34, 35, 36, 37, 38, 39, 40];
+        if (keys.includes(e.keyCode)) {
+            e.preventDefault();
+        }
+    };
+
+    const preventDefault = (e) => {
+        e.preventDefault();
+    };
+
     const handleScrollerClick = () => {
         if (isScrolling) return;
 
@@ -44,17 +71,16 @@ const Scroller = () => {
         const nextElement = document.querySelector(nextSection);
         if (nextElement) {
             setIsScrolling(true);
+            preventScroll();
+
             nextElement.scrollIntoView({ behavior: "smooth" });
 
             setTimeout(() => {
                 setIsScrolling(false);
+                enableScroll();
             }, 1000);
         }
     };
-
-    if (currentSectionIndex === sections.length - 1) {
-        return null;
-    }
 
     return (
         <a

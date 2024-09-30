@@ -59,6 +59,11 @@ const Header = () => {
                             </a>
                         </li>
                         <li>
+                            <a href="#project">
+                                {language == "fr" ? `Projets` : `Projects`}
+                            </a>
+                        </li>
+                        <li>
                             <a href="#contact">Contacts</a>
                         </li>
                     </ul>

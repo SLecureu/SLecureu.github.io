@@ -6,6 +6,10 @@ import Header from "./components/header.jsx";
 import App from "./App.jsx";
 import Root from "./root.jsx";
 import pfp from "./assets/pfp.jpg";
+import Js_logo from "./assets/js-logo.svg";
+import Go_logo from "./assets/go-logo.svg";
+import Ts_logo from "./assets/ts-logo.svg";
+import Sass_logo from "./assets/sass-logo.svg";
 import Scroller from "./components/scroller.jsx";
 import { LanguageContext, LanguageProvider } from "./components/context.jsx";
 
@@ -18,6 +22,10 @@ export {
     App,
     Root,
     pfp,
+    Js_logo,
+    Go_logo,
+    Ts_logo,
+    Sass_logo,
     LanguageContext,
     LanguageProvider,
     Scroller,

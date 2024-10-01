@@ -14,7 +14,7 @@
     display: flex;
     justify-content: center;
 
-    @media screen and (max-height: module.$mobile-width) and (min-aspect-ratio: 1/1) {
+    @media screen and (max-width: 750px), screen and (max-height: 599px) {
         visibility: hidden;
     }
 

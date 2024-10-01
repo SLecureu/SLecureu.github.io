@@ -19,15 +19,5 @@ html {
 
 main {
     min-height: 100vh;
+    transition: background-color 0.3s ease;
 }
-
-// .gap-page {
-//     width: 100vw;
-//     height: 20vh;
-//     background: linear-gradient(to right, #437d7f 33%, #4fd6e8 66%);
-
-//     @media screen and (max-width: module.$tablet-width),
-//         screen and (max-aspect-ratio: 1/1) {
-//         visibility: hidden;
-//     }
-// }

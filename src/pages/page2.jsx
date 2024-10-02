@@ -17,34 +17,74 @@ const Page2 = () => {
         <main className="page2" id="skills">
             <img src={Birds} className="birds" />
             <section className="work">
-                <h1>My Lorem Ipsum</h1>
+                <h1>
+                    {language == "fr"
+                        ? `Ma méthode de
+                    travail`
+                        : `My Working Method`}
+                </h1>
                 <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua.
+                    {language == "fr"
+                        ? `Ma méthode de travail est centrée sur l'adaptabilité, la
+                    collaboration avec mes pairs, et l'efficacité dans la
+                    création de projets tout en tenant compte des attentes et
+                    besoins changeants.`
+                        : ` My working method is focused on adaptability,
+                    collaboration with my peers, and efficiency in project
+                    creation while taking into account changing expectations 
+                    and needs.`}
                 </p>
                 <ul>
                     <li>
-                        <strong>Lorem and Ipsum:</strong> Lorem ipsum dolor sit
-                        amet, consectetur adipiscing elit, sed do eiusmod tempor
-                        incididunt ut labore et dolore magna aliqua.
+                        {language == "fr" ? (
+                            <>
+                                <strong>Adaptation et Flexibilité:</strong> Je
+                                peux réajuster rapidement mes priorités en
+                                fonction des évolutions du projet ou de facteurs
+                                extérieurs.
+                            </>
+                        ) : (
+                            <>
+                                <strong>Adaptability and Flexibility:</strong> I
+                                can quickly adjust my priorities based on
+                                project developments or external factors.
+                            </>
+                        )}
                     </li>
                     <li>
-                        <strong>Lorem and Ipsum:</strong> Lorem ipsum dolor sit
-                        amet, consectetur adipiscing elit, sed do eiusmod tempor
-                        incididunt ut labore et dolore magna aliqua.
+                        {language == "fr" ? (
+                            <>
+                                <strong>Collaboration Active:</strong> J’accorde
+                                une importance particulière à la communication
+                                continue avec toutes les parties prenantes.
+                            </>
+                        ) : (
+                            <>
+                                <strong>Active Collaboration:</strong> I place
+                                great importance on continuous communication
+                                with all stakeholders.
+                            </>
+                        )}
                     </li>
                     <li>
-                        <strong>Lorem and Ipsum:</strong> Lorem ipsum dolor sit
-                        amet, consectetur adipiscing elit, sed do eiusmod tempor
-                        incididunt ut labore et dolore magna aliqua.
+                        {language == "fr" ? (
+                            <>
+                                <strong>Amélioration Continue:</strong> Je
+                                remets en cause et j'affine le travail au fur et
+                                à mesure, assurant ainsi une progression
+                                constante vers un produit final de haute
+                                qualité.
+                            </>
+                        ) : (
+                            <>
+                                <strong>Continuous Improvement:</strong> I
+                                challenge and refine the work as it progresses,
+                                ensuring constant advancement towards a
+                                high-quality final product.
+                            </>
+                        )}
                     </li>
                 </ul>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua.
-                </p>
             </section>
 
             <section className="skills">

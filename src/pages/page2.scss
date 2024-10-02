@@ -7,9 +7,27 @@
     background-color: var(--first-color);
     position: relative;
 
+    overflow: hidden;
+
+    .birds {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        rotate: 200deg;
+        z-index: 0;
+
+        @media screen and (max-aspect-ratio: 1/1) {
+            rotate: 90deg;
+        }
+    }
+
     @media screen and (max-width: module.$tablet-width),
         screen and (max-height: 799px) {
         --size: 0.75rem;
+
+        .birds {
+            visibility: hidden;
+        }
     }
 
     * {
@@ -30,7 +48,7 @@
         margin-bottom: calc(var(--size) * 1.5);
     }
 
-    img {
+    .logo {
         height: 35px;
         width: 35px;
         margin-left: 5px;

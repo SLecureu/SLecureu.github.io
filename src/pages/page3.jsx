@@ -2,7 +2,6 @@ import { useContext } from "react";
 
 import { LanguageContext } from "../import.js";
 import "./page3.scss";
-import { SassColor } from "sass-embedded";
 
 const Page3 = () => {
     const { language } = useContext(LanguageContext);

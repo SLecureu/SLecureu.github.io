@@ -10,12 +10,12 @@ const Page3 = () => {
         language == "fr"
             ? [
                   {
-                      title: "Réseau Social 01",
+                      title: "Social Network 01",
                       description: "Projet d'école, un réseau social",
                       liveLink: "https://github.com/cramanan/Social-Network-01",
                   },
                   {
-                      title: "Projet d'Ecole",
+                      title: "School Platform",
                       description: `C'est l'un des projets scolaire que j'ai réalisé.
             L'objectif était d'apprendre le langage de requête GraphQL en créant ma propre
             page de profil de la plateforme scolaire.`,

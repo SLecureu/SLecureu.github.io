@@ -15,7 +15,11 @@
         height: 100vh;
 
         position: relative;
-        background-image: linear-gradient(180deg, #4fd6e8, #437d7f);
+        background-image: linear-gradient(
+            180deg,
+            module.$anti-color 25%,
+            transparent 75%
+        );
 
         @media screen and (max-width: module.$tablet-width),
             screen and (max-aspect-ratio: 1/1) {
@@ -33,7 +37,6 @@
             top: calc(50% - (var(--shape_size) / 2));
 
             transition: border 0.3s;
-            background-color: module.$complementary-color;
             border-radius: 50%;
             overflow: hidden;
 
@@ -148,7 +151,7 @@
                     &:hover {
                         background-color: adjust-color(
                             module.$anti-color,
-                            $lightness: 20%
+                            $lightness: 40%
                         );
                     }
                 }

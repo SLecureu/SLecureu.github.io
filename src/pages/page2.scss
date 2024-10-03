@@ -4,7 +4,6 @@
     --size: 1rem;
 
     padding: calc(var(--size) * 3);
-    background-color: var(--first-color);
     position: relative;
 
     overflow: hidden;
@@ -30,22 +29,21 @@
         }
     }
 
-    * {
-        color: rgb(52, 52, 52);
-    }
-
-    section {
+    .work,
+    .skills {
         width: 42vw;
         border-radius: 35px;
         padding: calc(var(--size) * 1.2);
         position: absolute;
 
-        background: linear-gradient(135deg, #4fd6e8, #437d7f);
+        background-color: var(--card-bg);
+        border: 1px solid var(--card-border);
     }
 
     h1 {
         font-size: calc(var(--size) * 2.5);
         margin-bottom: calc(var(--size) * 1.5);
+        color: module.$anti-color;
     }
 
     .logo {
@@ -90,11 +88,15 @@
                 box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
                 transition: all 0.3s ease;
 
+                background-color: var(--card-bg);
+                border: 1px solid var(--card-border);
+
                 h3 {
                     display: flex;
                     align-items: center;
                     font-size: calc(var(--size) * 1.5);
                     margin-bottom: calc(var(--size) * 0.5);
+                    color: module.$anti-color;
                 }
 
                 p {
@@ -111,10 +113,21 @@
 
     @media screen and (max-width: module.$mobile-width),
         screen and (max-height: module.$mobile-width) {
-        section {
+        .work,
+        .skills {
             position: initial;
             width: 100%;
             margin-bottom: 20px;
+        }
+    }
+
+    @media screen and (max-width: 1440px) {
+        .work {
+            top: 2vw;
+        }
+
+        .skills {
+            bottom: 2vw;
         }
     }
 }

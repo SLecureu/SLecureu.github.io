@@ -12,11 +12,16 @@ const Header = () => {
         let root = document.documentElement;
         root.style.setProperty(
             "--first-color",
-            isDarkMode ? "rgb(247, 255, 247)" : "rgb(52, 52, 52)"
+            isDarkMode ? "#f7fff7" : "#343434"
         );
         root.style.setProperty(
             "--second-color",
-            isDarkMode ? "rgb(52, 52, 52)" : "rgb(247, 255, 247)"
+            isDarkMode ? "#343434" : "#f7fff7"
+        );
+        root.style.setProperty("--card-bg", isDarkMode ? "#f4f4f4" : "#404040");
+        root.style.setProperty(
+            "--card-border",
+            isDarkMode ? "#ddd" : "#4f4f4f"
         );
     };
 

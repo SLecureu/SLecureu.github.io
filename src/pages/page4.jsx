@@ -1,5 +1,5 @@
 const Page4 = () => {
-    return <main className="page4" id="contact"></main>;
+    return <section className="page4" id="contact"></section>;
 };
 
 export default Page4;

@@ -14,9 +14,9 @@ const Page2 = () => {
     const { language } = useContext(LanguageContext);
 
     return (
-        <main className="page2" id="skills">
+        <section className="page2" id="skills">
             <img src={Birds} className="birds" />
-            <section className="work">
+            <div className="work">
                 <h1>
                     {language == "fr"
                         ? `Ma méthode de
@@ -85,9 +85,9 @@ const Page2 = () => {
                         )}
                     </li>
                 </ul>
-            </section>
+            </div>
 
-            <section className="skills">
+            <div className="skills">
                 <h1>
                     {language == "fr"
                         ? `Principaux Langages Maitrisés`
@@ -155,8 +155,8 @@ const Page2 = () => {
                         </p>
                     </div>
                 </div>
-            </section>
-        </main>
+            </div>
+        </section>
     );
 };
 

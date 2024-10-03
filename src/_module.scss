@@ -1,7 +1,10 @@
 :root {
     // Themes
-    --first-color: rgb(247, 255, 247);
-    --second-color: rgb(52, 52, 52);
+    --first-color: #f7fff7;
+    --second-color: #343434;
+
+    --card-bg: #f4f4f4;
+    --card-border: #ddd;
 }
 
 // Sizes
@@ -12,9 +15,6 @@ $mobile-width: 450px;
 //
 //$main-color: #4fd6e8;
 //linear-gradient(180deg, #4fd6e8, #437d7f)
-//
-// useless
-$complementary-color: rgb(243, 183, 0);
 //
 // text color
 $anti-color: #439775;

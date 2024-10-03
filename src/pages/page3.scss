@@ -15,6 +15,14 @@
         text-align: center;
     }
 
+    h3 {
+        margin-top: 25px;
+
+        a {
+            text-decoration: none;
+        }
+    }
+
     .projects__grid {
         width: 90vw;
         display: grid;
@@ -66,19 +74,6 @@
                         background-color: adjust-color(
                             module.$anti-color,
                             $lightness: -10%
-                        );
-                    }
-                }
-
-                &--code {
-                    background-color: transparent;
-                    color: module.$anti-color;
-                    border: 2px solid module.$anti-color;
-
-                    &:hover {
-                        background-color: adjust-color(
-                            module.$anti-color,
-                            $lightness: 40%
                         );
                     }
                 }

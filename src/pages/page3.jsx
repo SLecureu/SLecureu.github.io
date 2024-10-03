@@ -1,52 +1,45 @@
 import { useContext } from "react";
 
-import { LanguageContext } from "../import.js";
+import { LanguageContext, LanguageProvider } from "../import.js";
 import "./page3.scss";
 
 const Page3 = () => {
     const { language } = useContext(LanguageContext);
 
-    const projects = [
-        {
-            title: "Project Alpha",
-            description:
-                "A web-based application that helps users track their daily tasks and productivity.",
-            liveLink: "#",
-            sourceCode: "#",
-        },
-        {
-            title: "Project Beta",
-            description:
-                "An e-commerce platform with real-time inventory management and secure payment gateways.",
-            liveLink: "#",
-            sourceCode: "#",
-        },
-        {
-            title: "Project Gamma",
-            description:
-                "A mobile app that provides weather forecasts and travel recommendations based on the user's location.",
-            liveLink: "#",
-            sourceCode: "#",
-        },
-        {
-            title: "Project Delta",
-            description:
-                "A multiplayer game developed using WebSockets for real-time communication between players.",
-            liveLink: "#",
-            sourceCode: "#",
-        },
-        {
-            title: "Project Epsilon",
-            description:
-                "A portfolio website template with dynamic theme switching and multilingual support.",
-            liveLink: "#",
-            sourceCode: "#",
-        },
-    ];
+    const projects =
+        language == "fr"
+            ? [
+                  {
+                      title: "Réseau Social 01",
+                      description: "Projet d'école, un réseau social",
+                      liveLink: "https://github.com/cramanan/Social-Network-01",
+                  },
+                  {
+                      title: "Projet d'Ecole",
+                      description: `C'est l'un des projets scolaire que j'ai réalisé.
+            L'objectif était d'apprendre le langage de requête GraphQL en créant ma propre
+            page de profil de la plateforme scolaire.`,
+                      liveLink: "https://github.com/SLecureu/school-platform",
+                  },
+              ]
+            : [
+                  {
+                      title: "Social Network 01",
+                      description: "School project - a social network",
+                      liveLink: "https://github.com/cramanan/Social-Network-01",
+                  },
+                  {
+                      title: "School Platform",
+                      description: `This is one of my school project that I've done.
+            The goal was to learn the GraphQl query language, by creating my
+            own profile page of the school platform.`,
+                      liveLink: "https://github.com/SLecureu/school-platform",
+                  },
+              ];
 
     return (
         <section className="page3" id="project">
-            <h1>My Finished Projects</h1>
+            <h1>{language == "fr" ? "Quelques Projets" : "Some Projects"}</h1>
             <div className="projects__grid">
                 {projects.map((project, index) => (
                     <div className="project__card" key={index}>
@@ -59,25 +52,23 @@ const Page3 = () => {
                                 rel="noopener noreferrer"
                                 className="btn btn--view"
                             >
-                                View Project
-                            </a>
-                            <a
-                                href={project.sourceCode}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="btn btn--code"
-                            >
-                                Source Code
+                                {language == "fr"
+                                    ? "Voir Projet"
+                                    : "View Project"}
                             </a>
                         </div>
                     </div>
                 ))}
             </div>
-            {/* <h3>
-                <a>
-                    View more on <span>github</span>
+            <h3>
+                {language == "fr" ? "Voir plus sur " : "View more on "}
+                <a
+                    href="https://github.com/SLecureu"
+                    style={{ color: `#7f00ff` }}
+                >
+                    github
                 </a>
-            </h3> */}
+            </h3>
         </section>
     );
 };

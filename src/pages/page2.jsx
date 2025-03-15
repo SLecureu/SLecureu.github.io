@@ -151,9 +151,9 @@ using libraries such as scikit-learn for complex data analysis projects.`}
                         <p>
                             {language == "fr"
                                 ? `Efficace dans la création de systèmes concurrents et sécurisés
-en exploitant les fonctionnalités avancées de Rust telles que les traits, les génériques et le pattern matching pour des applications robustes et performantes`
+en exploitant les fonctionnalités avancées de Rust pour des applications robustes et performantes`
                                 : `Proficient in building concurrent and secure systems
-leveraging Rust's advanced features such as traits, generics, and pattern matching for robust and high-performance applications`}
+leveraging Rust's advanced features for robust and high-performance applications`}
                         </p>
                     </div>
                 </div>

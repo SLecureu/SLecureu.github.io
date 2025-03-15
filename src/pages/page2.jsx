@@ -4,8 +4,8 @@ import {
     LanguageContext,
     Js_logo,
     Go_logo,
-    Ts_logo,
-    Sass_logo,
+    rust_logo,
+    python_logo,
     Birds,
 } from "../import.js";
 import "./page2.scss";
@@ -96,6 +96,23 @@ const Page2 = () => {
                 <div className="skills__list">
                     <div className="skill">
                         <h3>
+                            Python
+                            <img
+                                src={python_logo}
+                                alt="Python logo"
+                                className="logo"
+                            />
+                        </h3>
+                        <p>
+                            {language == "fr"
+                                ? `Efficace dans le développement de modèles de machine learning robustes et évolutifs
+en utilisant des bibliothèques comme scikit-learn pour des projets d'analyse de données complexes.`
+                                : ` Proficient in developing robust and scalable machine learning models
+using libraries such as scikit-learn for complex data analysis projects.`}
+                        </p>
+                    </div>
+                    <div className="skill">
+                        <h3>
                             Go
                             <img src={Go_logo} alt="Go logo" className="logo" />
                         </h3>
@@ -124,34 +141,19 @@ const Page2 = () => {
                     </div>
                     <div className="skill">
                         <h3>
-                            SCSS/Sass
+                            Rust
                             <img
-                                src={Sass_logo}
-                                alt="Sass logo"
+                                src={rust_logo}
+                                alt="Rust logo"
                                 className="logo"
                             />
                         </h3>
                         <p>
                             {language == "fr"
-                                ? `Efficace dans l'écriture de CSS modulaire et évolutif
-                            en utilisant des préprocesseurs comme Sass pour des projets de grande envergure.`
-                                : `Efficient in writing modular, scalable CSS using
-                            preprocessors like Sass for larger projects.`}
-                        </p>
-                    </div>
-                    <div className="skill">
-                        <h3>
-                            TypeScript
-                            <img src={Ts_logo} alt="Ts logo" className="logo" />
-                        </h3>
-                        <p>
-                            {language == "fr"
-                                ? `Familiarité avec le typage statique et l'amélioration
-                            des projets JavaScript en utilisant TypeScript pour une
-                            meilleure qualité et maintenabilité du code.`
-                                : `Familiar with static typing and enhancing JavaScript
-                            projects using TypeScript for better code quality
-                            and maintainability.`}
+                                ? `Efficace dans la création de systèmes concurrents et sécurisés
+en exploitant les fonctionnalités avancées de Rust telles que les traits, les génériques et le pattern matching pour des applications robustes et performantes`
+                                : `Proficient in building concurrent and secure systems
+leveraging Rust's advanced features such as traits, generics, and pattern matching for robust and high-performance applications`}
                         </p>
                     </div>
                 </div>

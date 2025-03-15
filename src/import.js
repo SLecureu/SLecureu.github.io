@@ -8,8 +8,8 @@ import Root from "./root.jsx";
 import pfp from "./assets/pfp.jpg";
 import Js_logo from "./assets/js-logo.svg";
 import Go_logo from "./assets/go-logo.svg";
-import Ts_logo from "./assets/ts-logo.svg";
-import Sass_logo from "./assets/sass-logo.svg";
+import rust_logo from "./assets/rust_logo.svg";
+import python_logo from "./assets/python_logo.svg";
 import Birds from "./assets/birds.svg";
 import Scroller from "./components/scroller.jsx";
 import { LanguageContext, LanguageProvider } from "./components/context.jsx";
@@ -25,8 +25,8 @@ export {
     pfp,
     Js_logo,
     Go_logo,
-    Ts_logo,
-    Sass_logo,
+    rust_logo,
+    python_logo,
     Birds,
     LanguageContext,
     LanguageProvider,

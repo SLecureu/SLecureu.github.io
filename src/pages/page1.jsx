@@ -24,12 +24,8 @@ const Page1 = () => {
                     <h1>Simon Lecureux</h1>
                     <p>
                         {language == "fr"
-                            ? `Je suis ouvert à toute technologie et j'ai déjà
-                            utilisé React, Next.js, Go et d'autres encore dans mes projets.
-                            Actuellement, j'étudie et je cherche de nouvelles opportunités.`
-                            : `I am open to any technology and have been using
-                        React, Next.js, Go, and more in my projects. Currently
-                        studying and looking for new opportunities.`}
+                            ? `Je suis un développeur passionné par la datascience, le machine learning, et le cloud, et j’aimerais beaucoup avoir l’occasion de travailler dans ce secteur.`
+                            : `I am a developer passionate about data science, machine learning, and cloud computing, and I would very much like to have the opportunity to work in this field.`}
                     </p>
                     <div className="buttons">
                         <button className="btn btn--download">

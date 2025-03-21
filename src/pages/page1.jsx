@@ -33,7 +33,9 @@ const Page1 = () => {
                                 ? "Télécharger CV"
                                 : "Download CV"}
                         </button>
-                        <button className="btn btn--contact">Contacts</button>
+                        <a className="btn btn--contact" href="#contact">
+                            Contacts
+                        </a>
                     </div>
                 </div>
             </div>

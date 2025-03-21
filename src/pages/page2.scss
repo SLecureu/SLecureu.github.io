@@ -44,6 +44,7 @@
         font-size: calc(var(--size) * 2.5);
         margin-bottom: calc(var(--size) * 1.5);
         color: module.$anti-color;
+        overflow: visible;
     }
 
     .logo {
@@ -83,6 +84,7 @@
             gap: calc(var(--size) * 1.5);
 
             .skill {
+                max-width: calc(42vw - (var(--size) * 1.2 * 2));
                 border-radius: 10px;
                 padding: calc(var(--size) * 1.5);
                 box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);

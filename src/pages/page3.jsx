@@ -21,6 +21,13 @@ const Page3 = () => {
             page de profil de la plateforme scolaire.`,
                       liveLink: "https://github.com/SLecureu/school-platform",
                   },
+                  {
+                      title: "NLP-Enriched News",
+                      description: `Ce projet met en œuvre une plateforme d'actualités enrichie par 
+                      le traitement du langage naturel (NLP) qui analyse les articles de presse, détecte les entités, 
+                      classifie les sujets, effectue une analyse des sentiments, et identifie les potentiels scandales environnementaux.`,
+                      liveLink: "https://github.com/SLecureu/school-platform",
+                  },
               ]
             : [
                   {
@@ -33,6 +40,13 @@ const Page3 = () => {
                       description: `This is one of my school project that I've done.
             The goal was to learn the GraphQl query language, by creating my
             own profile page of the school platform.`,
+                      liveLink: "https://github.com/SLecureu/school-platform",
+                  },
+                  {
+                      title: "NLP-Enriched News",
+                      description: `This project implements an NLP-enriched News platform that 
+                      analyzes news articles, detects entities, classifies topics, performs sentiment analysis, 
+                      and identifies potential environmental scandals.`,
                       liveLink: "https://github.com/SLecureu/school-platform",
                   },
               ];

@@ -26,7 +26,7 @@ const Page3 = () => {
                       description: `Ce projet met en œuvre une plateforme d'actualités enrichie par 
                       le traitement du langage naturel (NLP) qui analyse les articles de presse, détecte les entités, 
                       classifie les sujets, effectue une analyse des sentiments, et identifie les potentiels scandales environnementaux.`,
-                      liveLink: "https://github.com/SLecureu/school-platform",
+                      liveLink: "https://github.com/SLecureu/NLP-enriched-News",
                   },
               ]
             : [
@@ -47,7 +47,7 @@ const Page3 = () => {
                       description: `This project implements an NLP-enriched News platform that 
                       analyzes news articles, detects entities, classifies topics, performs sentiment analysis, 
                       and identifies potential environmental scandals.`,
-                      liveLink: "https://github.com/SLecureu/school-platform",
+                      liveLink: "https://github.com/SLecureu/NLP-enriched-News",
                   },
               ];
 
